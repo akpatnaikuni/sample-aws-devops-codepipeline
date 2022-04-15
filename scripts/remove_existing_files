@@ -1,0 +1,2 @@
+#!/bin/bash
+find /var/www/html -name 'index.html' -delete

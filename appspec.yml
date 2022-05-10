@@ -1,21 +1,8 @@
 version: 0.0 ##version
 os: linux  ## OS type
 files:
-  - source: /index.html  ##source file
+  - source: /  ##source file
     destination: /var/www/html/ ## destination directory
-hooks: ##hooks to be used
-  BeforeInstall: 
-    - location: scripts/install_dependencies
-      timeout: 300
-      runas: root
-    - location: scripts/remove_existing_files
-      timeout: 300
-      runas: root
-    - location: scripts/start_server
-      timeout: 300
-      runas: root
-  ApplicationStop:
-    - location: scripts/stop_server
-      timeout: 300
-      runas: root
+    overwrite: true
+
 
